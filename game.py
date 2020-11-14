@@ -189,7 +189,7 @@ class Raycaster(object):
       TextSurf, TextRect = self.text_objects("Click or press SPACE for start", smallText)
       TextRect.center = (500,300)
       gameDisplay.blit(TextSurf, TextRect)
-      TextSurf, TextRect = self.text_objects("Reach the key and the door", smallText)
+      TextSurf, TextRect = self.text_objects("Reach the key and the door to win", smallText)
       TextRect.center = (500,250)
       gameDisplay.blit(TextSurf, TextRect)
 
@@ -275,7 +275,7 @@ class Raycaster(object):
       self.render()
 
       for e in pygame.event.get():
-        if self.player["x"] >= 400 and self.player["x"] >= 400:
+        if self.player["x"] >= 420 and self.player["x"] >= 420:
           self.win_screen()
 
         if e.type == pygame.QUIT or (e.type == pygame.KEYDOWN and e.key == pygame.K_ESCAPE):
